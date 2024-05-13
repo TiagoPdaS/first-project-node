@@ -1,10 +1,12 @@
 const express = require("express");
 const uuid = require("uuid");
-const port = 3000;
+const cors = require('cors')
+
+const port = 3001;
 
 const app = express();
 app.use(express.json());
-
+app.use(cors())
 /*
 -Query Params=> mysite.com/users?nome=iago&age=30 //filters
 -Route Params=> /users/2  //SEARCH, DELETE, OR UPDATE SOMETHING SPECIFIC
